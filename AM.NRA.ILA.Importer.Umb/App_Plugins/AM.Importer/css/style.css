@@ -1,0 +1,31 @@
+﻿@import url(http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css);
+.AM_Importer input[type=text].wide {
+    display:block;
+    width:300px;
+}
+
+.AM_Importer label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.AM_Importer input[type=button] {
+    margin-top: 2em;
+}
+
+.AM_Importer .hide {
+    display: none;
+}
+
+.AM_Importer .show {
+    display: block;
+}
+
+.AM_Importer .error {
+    color: red;
+}
+
+.AM_Importer input.has-error,
+.AM_Importer select.has-error {
+    border:solid 1px red;
+}

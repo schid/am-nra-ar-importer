@@ -1,0 +1,40 @@
+﻿<div class="AM_Importer" ng-controller="AM.ImporterController">
+    <form name="importerForm" id="importerForm" novalidate>
+        <h2>Shared Content Importer</h2>
+        <p>All fields are required.</p>
+        <h3>Step One</h3>
+        <p>Enter the name of your source XML file. Note: this file must be saved in the website's app_data directory:</p>
+        <input type="text" name="importFileName" ng-model="job.sourcefile" ng-class="{'has-error': importerForm.importFileName.$invalid && importerForm.importFileName.$dirty}" style="width:400px;" required />
+        <span class="error" ng-show="importerForm.importFileName.$dirty && importerForm.importFileName.$error.required">Required</span>
+        <h3>Step Two</h3>
+        <p>Select the type of content you want to import:</p>
+        <select name="importContentType" id="importContentType" ng-model="job.contenttype" ng-options="ct.name for ct in contenttypes" ng-class="{'has-error': importerForm.importContentType.$invalid && importerForm.importContentType.$dirty}" style="width:250px;" required>
+            <option value="">Select a content type to import</option>
+        </select>
+        <span class="error" ng-show="importerForm.importContentType.$dirty && importerForm.importContentType.$error.required">Required</span>
+        <h3>Step Three</h3>
+        <p>Select the publication date range:</p>
+        <label for="txtStartDate">
+            Start Date:
+            <input type="text" name="importStartDate" id="importStartDate" class="amdp" ng-model="job.startdate" ng-class="{'has-error': importerForm.importStartDate.$invalid && importerForm.importStartDate.$dirty}" required />
+            <span class="error" ng-show="importerForm.importStartDate.$dirty && importerForm.importStartDate.$error.required">Required</span>
+        </label>
+        <label for="txtEndDate">
+            End Date:
+            <input type="text" name="importEndDate" id="importEndDate" class="amdp" ng-model="job.enddate" ng-class="{'has-error': importerForm.importEndDate.$invalid && importerForm.importEndDate.$dirty}" required />
+            <span class="error" ng-show="importerForm.importEndDate.$dirty && importerForm.importEndDate.$error.required">Required</span>
+        </label>
+        <input type="button" ng-click="engage()" ng-disabled="importerForm.$invalid || importerForm.$pristine" value="Start Import" class="btn btn-primary" />
+        <!--<p>form is pristine: {{importerForm.$pristine}}</p>
+        <p>form is dirty: {{importerForm.$dirty}}</p>
+        <p>form is invalid: {{importerForm.$invalid}}</p>-->
+        <div ng-show="jobstarted">
+            <h4>Import started!</h4>
+            <div ng-repeat="item in jobsreport">
+                <p>Importing {{item.ContentType}} content published between {{item.StartDate}} and {{item.EndDate}} from {{item.SourceFile}}.</p>
+                <p>Items total: {{item.ItemTotal}} Items remaining: {{item.ItemCount}}</p>
+            </div>
+            <input type="button" ng-click="status()" value="Refresh Status" class="btn" />
+        </div>
+    </form>
+</div>

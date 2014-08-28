@@ -1,0 +1,6 @@
+﻿{
+	javascript: [
+		'~/App_Plugins/AM.Importer/resources/Import.Resource.js',
+		'~/App_Plugins/AM.Importer/controller.js'
+	]
+}
