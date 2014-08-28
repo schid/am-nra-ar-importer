@@ -1,4 +1,6 @@
 am-nra-ar-importer
 ==================
 
-Wordpress to Umbraco data importer used for ar import
+Original code was used for umbraco data import for ila.
+Wordpress to Umbraco data importer customized for ar import.
+
