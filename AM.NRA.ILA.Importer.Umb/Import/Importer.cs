@@ -623,7 +623,7 @@ namespace AM.NRA.ILA.Importer.Umb.Import
                                     }
                                 }
                                 else {
-                                    System.Diagnostics.Debug.WriteLine("*** THIS IS AN ARITICLE, BLOG, OR VIDEO RECORD! ***");
+                                    System.Diagnostics.Debug.WriteLine("*** THIS IS AN ARTICLE, BLOG, OR VIDEO RECORD! ***");
                                     if (node.SelectSingleNode("post_name") != null && node.SelectSingleNode("post_name").FirstChild != null)
                                     {
                                         strUrls = "/" + node.SelectSingleNode("post_name").FirstChild.Value;
