@@ -678,15 +678,15 @@ namespace AM.NRA.ILA.Importer.Umb.Import
                                     System.Diagnostics.Debug.WriteLine("*** postmeta meta_key:  " + meta_key);
                                     System.Diagnostics.Debug.WriteLine("*** postmeta meta_value:  " + meta_value);
 
-                                    if (meta_key == "AR_by_line") { 
+                                    if ((meta_key == "AR_by_line") || (meta_key == "AH_by_line")) { 
                                         AR_by_line = meta_value;
                                         a.ByLine = AR_by_line;
                                     }
-                                    if (meta_key == "AR_image_front") { 
+                                    if ((meta_key == "AR_image_front") || (meta_key == "AH_image_front")) { 
                                         AR_image_front = meta_value;
                                         a.Image = AR_image_front;
                                     }
-                                    if (meta_key == "AR_pdf" && meta_value != "none") { 
+                                    if (((meta_key == "AR_pdf") || (meta_key == "AH_pdf")) && meta_value != "none") { 
                                         AR_pdf = meta_value;
                                         a.Pdf = AR_pdf;
                                     }
@@ -694,11 +694,11 @@ namespace AM.NRA.ILA.Importer.Umb.Import
                                         Video = meta_value;
                                         a.Video = Video;
                                     }
-                                    if (meta_key == "AR_video_flv") { 
+                                    if ((meta_key == "AR_video_flv") || (meta_key == "AH_video_flv")) { 
                                         AR_video_flv = meta_value;
                                         a.VideoFlv = AR_video_flv;
                                     }
-                                    if (meta_key == "AR_video_mp4") { 
+                                    if ((meta_key == "AR_video_mp4") || (meta_key == "AH_video_mp4")) { 
                                         AR_video_mp4 = meta_value;
                                         a.VideoMp4 = AR_video_mp4;
                                     }
@@ -988,8 +988,29 @@ namespace AM.NRA.ILA.Importer.Umb.Import
         public void ImportArticleContent(XmlNode rootNode)
         {
             List<Article> articlesToImport = new List<Article>();
-            int parentNodeId = 2404;
-           
+
+
+
+
+
+
+
+
+
+
+            /* ******************* ROOT ARTICLE FOLDER ID *************  */
+            //int parentNodeId = 2404;     // Staging AH
+            int parentNodeId = 1090;     // local AR
+            /* ******************* ROOT ARTICLE FOLDER ID *************  */
+
+
+
+
+
+
+
+
+
             articlesToImport = ImportArticleContent(rootNode, articlesToImport, parentNodeId);
 
             System.Diagnostics.Debug.WriteLine("***********************************");

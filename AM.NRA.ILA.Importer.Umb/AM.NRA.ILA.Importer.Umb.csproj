@@ -201,8 +201,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>XCOPY "$(ProjectDir)bin\$(TargetName).*" "C:\Users\scott-chidester\Documents\Visual Studio 2013\Projects\AmericanRiffleman2\AmericanRiffleman2\bin" /Y
-XCOPY "$(ProjectDir)usercontrols\*.ascx" "C:\Users\scott-chidester\Documents\Visual Studio 2013\Projects\AmericanRiffleman2\AmericanRiffleman2\usercontrols" /Y</PostBuildEvent>
+    <PostBuildEvent>XCOPY "$(ProjectDir)bin\$(TargetName).*" "C:\Users\scott-chidester\Documents\Visual Studio 2013\Projects\americanrifleman\americanRifleman\americanRifleman\americanRifleman\bin" /Y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
