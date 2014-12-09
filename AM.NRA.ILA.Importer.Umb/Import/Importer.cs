@@ -662,6 +662,7 @@ namespace AM.NRA.ILA.Importer.Umb.Import
                                 string meta_key = "";
                                 string meta_value = "";
                                 string AR_by_line = "";
+                                string AR_image_main = "";
                                 string AR_image_front = "";
                                 string AR_pdf = "";
                                 string Video = "";
@@ -682,10 +683,20 @@ namespace AM.NRA.ILA.Importer.Umb.Import
                                         AR_by_line = meta_value;
                                         a.ByLine = AR_by_line;
                                     }
-                                    if ((meta_key == "AR_image_front") || (meta_key == "AH_image_front")) { 
+
+
+                                    // if image_front is set use that (largest image) else use image_main
+                                    if ((meta_key == "AR_image_front") || (meta_key == "AH_image_front"))
+                                    {
                                         AR_image_front = meta_value;
                                         a.Image = AR_image_front;
                                     }
+                                    else if ((meta_key == "AR_image_main") || (meta_key == "AH_image_main"))
+                                    {
+                                        AR_image_main = meta_value;
+                                        a.Image = AR_image_main;
+                                    }
+                                    
                                     if (((meta_key == "AR_pdf") || (meta_key == "AH_pdf")) && meta_value != "none") { 
                                         AR_pdf = meta_value;
                                         a.Pdf = AR_pdf;
@@ -999,8 +1010,8 @@ namespace AM.NRA.ILA.Importer.Umb.Import
 
 
             /* ******************* ROOT ARTICLE FOLDER ID *************  */
-            //int parentNodeId = 2404;     // Staging AH
-            int parentNodeId = 1090;     // local AR
+            int parentNodeId = 2404;     // Staging AH
+            //int parentNodeId = 1090;     // local AR
             /* ******************* ROOT ARTICLE FOLDER ID *************  */
 
 
