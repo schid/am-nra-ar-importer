@@ -691,7 +691,7 @@ namespace AM.NRA.ILA.Importer.Umb.Import
                                         AR_image_front = meta_value;
                                         a.Image = AR_image_front;
                                     }
-                                    else if ((meta_key == "AR_image_main") || (meta_key == "AH_image_main"))
+                                    if ((meta_key == "AR_image_main") || (meta_key == "AH_image_main") && (AR_image_front == ""))
                                     {
                                         AR_image_main = meta_value;
                                         a.Image = AR_image_main;
@@ -1009,10 +1009,21 @@ namespace AM.NRA.ILA.Importer.Umb.Import
 
 
 
+
+
+
+
             /* ******************* ROOT ARTICLE FOLDER ID *************  */
-            int parentNodeId = 2404;     // Staging AH
-            //int parentNodeId = 1090;     // local AR
+            //int parentNodeId = 1068;     // Staging AH
+            int parentNodeId = 1090;     // local AR
             /* ******************* ROOT ARTICLE FOLDER ID *************  */
+
+
+
+
+
+
+
 
 
 

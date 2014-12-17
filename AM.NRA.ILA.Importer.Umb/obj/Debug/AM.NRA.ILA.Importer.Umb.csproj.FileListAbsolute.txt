@@ -68,6 +68,5 @@ C:\Users\scott-chidester\Documents\Visual Studio 2013\Projects\AM.NRA.ILA.Import
 C:\Users\scott-chidester\Documents\Visual Studio 2013\Projects\AM.NRA.ILA.Importer.Umb\AM.NRA.ILA.Importer.Umb\bin\ICSharpCode.SharpZipLib.dll
 C:\Users\scott-chidester\Documents\Visual Studio 2013\Projects\AM.NRA.ILA.Importer.Umb\AM.NRA.ILA.Importer.Umb\bin\TidyNet.dll
 C:\Users\scott-chidester\Documents\Visual Studio 2013\Projects\AM.NRA.ILA.Importer.Umb\AM.NRA.ILA.Importer.Umb\bin\umbraco.XmlSerializers.dll
-C:\Users\scott-chidester\Documents\Visual Studio 2013\Projects\AM.NRA.ILA.Importer.Umb\AM.NRA.ILA.Importer.Umb\obj\Debug\AM.NRA.ILA.Importer.Umb.csprojResolveAssemblyReference.cache
 C:\Users\scott-chidester\Documents\Visual Studio 2013\Projects\AM.NRA.ILA.Importer.Umb\AM.NRA.ILA.Importer.Umb\obj\Debug\AM.NRA.ILA.Importer.Umb.dll
 C:\Users\scott-chidester\Documents\Visual Studio 2013\Projects\AM.NRA.ILA.Importer.Umb\AM.NRA.ILA.Importer.Umb\obj\Debug\AM.NRA.ILA.Importer.Umb.pdb
